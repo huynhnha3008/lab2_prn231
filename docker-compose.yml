@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  odatabookstore:
+    image: ${DOCKER_REGISTRY-}odatabookstore
+    build:
+      context: .
+      dockerfile: ODataBookStore/Dockerfile
