@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  lab2-svc:
+    hostname: lab2-svc
+    networks:
+      - lab
+    build:
+      context: .
+      dockerfile: ./ODataBookStore/Dockerfile
+    ports:
+      - 8080:8080
+
+networks:
+  lab:
+    driver: bridge
